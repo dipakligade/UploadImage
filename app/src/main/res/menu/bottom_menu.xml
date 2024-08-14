@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/baseline_home"
+        android:id="@+id/welcome_Fragment"
+        android:title="Home"/>
+    <item
+        android:icon="@drawable/baseline_upload_file"
+        android:id="@+id/upload_image_Fragment"
+        android:title="Upload Image"/>
+
+    <item
+        android:icon="@drawable/baseline_image"
+        android:id="@+id/show_Images_Fragment"
+        android:title="Show Images"/>
+</menu>

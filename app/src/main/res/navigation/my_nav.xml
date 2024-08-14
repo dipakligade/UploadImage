@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/welcome_Fragment">
+
+    <fragment
+        android:id="@+id/welcome_Fragment"
+        android:name="com.example.uploadimage.Welcome_Fragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/show_Images_Fragment"
+        android:name="com.example.uploadimage.Show_Images_Fragment"
+        android:label="fragment_show_images"
+        tools:layout="@layout/fragment_show_images" />
+    <fragment
+        android:id="@+id/upload_image_Fragment"
+        android:name="com.example.uploadimage.Upload_image_Fragment"
+        android:label="fragment_upload_image"
+        tools:layout="@layout/fragment_upload_image" />
+</navigation>

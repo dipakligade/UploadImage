@@ -15,42 +15,38 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private ArrayList<Model> mList;
     private Context context;
+    private ArrayList<Model> list;
 
-    public MyAdapter(Context context, ArrayList<Model> mList){
-        this.context=context;
-        this.mList=mList;
+    public MyAdapter(Context context, ArrayList<Model> list) {
+        this.context = context;
+        this.list = list;
     }
-
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item, parent, false);
-        return new MyViewHolder(v);
-
+        View view = LayoutInflater.from(context).inflate(R.layout.image_item, parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
-        Glide.with(context).load(mList.get(position).getImageUrl()).into(holder.imageView);
-
+        Model model = list.get(position);
+        Glide.with(context).load(model.getImageUrl()).into(holder.imageView);
     }
 
     @Override
     public int getItemCount() {
-        return mList.size();
+        return list.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            imageView = itemView.findViewById(R.id.m_image);
+            imageView = itemView.findViewById(R.id.imageView);
         }
     }
 }
